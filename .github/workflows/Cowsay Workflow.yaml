@@ -9,6 +9,8 @@ jobs:
            - name: Install Cowsay
              run: sudo apt-get install cowsay -y
            - name: Execute Cowsay
-             run: cowsay -f drygon "Run for cover, I am DRYGON... RAWR" >> drygon.txt
+             run: |
+                cowsay -l
+                cowsay -f drygon "Run for cover, I am DRYGON... RAWR" >> drygon.txt
            - name: List files
              run: ls -ltra
