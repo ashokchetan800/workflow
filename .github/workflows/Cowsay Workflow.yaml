@@ -1,0 +1,14 @@
+name: Cowsay Workflow
+on: push
+jobs: 
+    cowsay:
+        runs-on: ubuntu-latest
+        steps:
+           - name: Checkout
+             uses: actions/checkout@v4
+           - name: Install Cowsay
+             run: sudo apt-get install cowsay -y
+           - name: Execute Cowsay
+             run: cowsay -f drygon "Run for cover, I am DRYGON... RAWR" >> drygon.txt
+           - name: List files
+             run: ls -ltra
