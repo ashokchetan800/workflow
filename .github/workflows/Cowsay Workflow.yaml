@@ -42,7 +42,7 @@ jobs:
             run: sudo apt-get update && sudo apt-get install -y cowsay
 
           - name: Run cowsay with message
-            run: cowsay -f cow "$(cat message.txt)" > cowsay.txt
+            run: ls && cowsay "$(cat message.txt)" > cowsay.txt
 
           - name: Upload cowsay artifact
             uses: actions/upload-artifact@v4
