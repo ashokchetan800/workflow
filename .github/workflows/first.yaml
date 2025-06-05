@@ -1,0 +1,12 @@
+name: my first workflow
+on: push
+jobs:
+    first-job:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Welcome
+              run: echo "Welcome"
+            - name: Create File
+              run: touch example.txt
+            - name: list
+              run: ls
