@@ -14,3 +14,5 @@ jobs:
                 cowsay -f dragon "Run for cover, I am DRaGON... RAWR" >> dragon.txt
            - name: List files
              run: ls -ltra
+           - name: Cat Cowsay
+             run: cat dragon.txt
